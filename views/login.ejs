@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<
+	script>
+    function validateform(){
+     var user=document.forms["loginuser"]
+     ["lguser"].value;
+     var ulen=user.length;
+     var pass=document.forms["loginuser"]
+     ["lgpass"].value;
+     var plen=pass.length;
+    if( user == "" || pass =="" || user == " " || pass ==" " )
+     { alert("Enter the details correctly");
+    return false;}  
+   if(ulen > 20 || plen > 20)
+    {alert("Characters exceeds limit 20");
+    return false;
+    }  
+    }
+  </script>
+</head>
+<body>
+
+</body>
+</html><link href="login.css" rel="stylesheet" id="bootstrap-css">
+<script src="login.js"></script>
+<script src="login.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="login.js" ></script>
+<body>
+<div id="formWrapper">
+
+<div id="form">
+<div class="logo">
+<h1 class="text-center head">USER LOGIN</h1>
+</div>
+	<form name=pq action="login1.html">
+<div class="form-item">
+				
+			<div class="form-item">
+				
+			SCHOLAR ID:<input type="text" name="fn" id="fn" class="form-style" autocomplete="off"placeholder="Name of the Research Scholar"/>
+		</div>
+		<div class="form-item">
+<div class="form-item">
+				
+			PASSWORD:<br><br>
+<input type="password" name="fn" id="fn" class="form-style" autocomplete="off"placeholder="password"/>
+		</div>
+	<center><input type="submit" class="login" value="LOGIN">
+		<div class="clear-fix"></div>
+		</div></center>
+	<form id="signup"  name="signupuser" action="/signup"
+     method="post" >
+     <center><input type="submit" class="login" value="signup">
+		<div class="clear-fix"></div>
+		</div></center>
+
+  </form>
+			
+</div>
+</div>
+</form>
+</body>
+</html>

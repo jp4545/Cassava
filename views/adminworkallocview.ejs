@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.btn-group .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: center;
+    position: center;
+}
+
+.btn-group .button:hover {
+    background-color: #3e8e41;
+}
+
+input[type=text], select {
+    width: 45%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 10%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+.customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.customers tr:nth-child(even){background-color: #f2f2f2;}
+
+.customers tr:hover {background-color: #ddd;}
+
+.customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    
+        $("#adwrreg1").hide();
+        fetchallwa();
+    $("#adwrreg").click(function(){
+        $("#adwrreg1").show();
+    });
+    
+    
+  
+   $("#regbutadwr").click(function(event){   
+              searchresultadwr1();
+            });  
+
+
+     function searchresultadwr1()
+  {
+   var regwabox = document.getElementById("wark");   
+            
+              $.ajax({
+                  type: "POST",
+                  url: "/fetchregbywork",
+                  data:{ rwag1: regwabox.value },
+                  success: function(docs) {
+                   populates(docs);
+                },
+                error: function(jqXHR, textStatus, err) {
+                  alert('text status '+textStatus+', err '+err)
+                }
+            });
+  }
+    
+   function populates(docs)
+ {
+  $('#mytablewr tr').not(':first').remove();
+      var html = '';
+      $.each(docs, function (i) {
+          var num=i+1;
+          html += '<tr><td>' + num
+           + '</td><td>' + eval(JSON.stringify(docs[i].idregg))
+           + '</td><td>' + eval(JSON.stringify(docs[i].workallocation))
+            + '</td><td>' + eval(JSON.stringify(docs[i].supername))
+           + '</td></tr>';
+        });
+  $('#mytablewr tr').first().after(html);
+ }
+
+   function fetchallwa()
+{
+          
+              $.ajax({
+                  type: "POST",
+                  url: "/viewallbywork",
+                  success: function(docs) {
+                    populates(docs);
+                },
+                error: function(jqXHR, textStatus, err) {
+                  alert('text status '+textStatus+', err '+err)
+                }
+            });
+}
+ 
+
+});
+</script>
+</head>
+<center>
+<body>
+<br>
+<div class="btn-group">
+  <button id="adwrreg" class="button">View work allocation by RegisterNumber</button>
+<br>
+<p id="adwrreg1"><br><input type="text" id="wark" name="rno" placeholder="Search By Register number"> 
+&nbsp&nbsp&nbsp&nbsp&nbsp<input id="regbutadwr" type="submit" value="Search">
+ </p>
+</center><br><br><br>
+<center>
+<table id="mytablewr" class="customers">
+            <tr>
+                <th scope="col">s.no</th>
+                <th scope="col">Register Number</th>
+                <th scope="col">Work Allocation</th>
+                <th scope="col">Work Allocated By</th>
+               </tr>
+        </table>
+</center>   
+</body>
+</body>
+</html>
+

@@ -1,0 +1,143 @@
+
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<head>
+  <title>User Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="profile.js"></script>
+
+</head>
+
+
+<hr>
+<div class="container bootstrap snippet">
+    <div class="row">
+  		<div class="col-sm-10"><h1>Welcome&nbsp<%= Namee1%>!!</h1></div>
+    	<div class="col-sm-2"><a href="/users" class="pull-right"><img title="profile image" class="img-circle img-responsive" src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a></div>
+    </div>
+    <div class="row">
+  		<div class="col-sm-3"><!--left col-->
+              
+
+      <div class="text-center">
+        <img src="http://ssl.gstatic.com/accounts/ui/avatar_2x.png" class="avatar img-circle img-thumbnail" alt="avatar">
+        <h6>Upload a different photo...</h6>
+        <input type="file" class="text-center center-block file-upload">
+      </div></hr><br>
+
+          
+          
+        </div><!--/col-3-->
+    	<div class="col-sm-9">
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="/p">Profile</a></li>
+                <li><a data-toggle="tab" href="/p1" >Professional Qualification</a></li>
+                <li><a data-toggle="tab" href="/p2">Research Supervisor Details</a></li>
+                <li> <a  data-toggle="tab" href="/workpro">WorkAllocation</a></li>
+               <li> <a  data-toggle="tab" href="/logout">Logout</a></li>
+              </ul>
+
+              
+          <div class="tab-content">
+            <div class="tab-pane active" id="home">
+                <hr>
+                      <div class="form-group">
+
+                  
+                              <label for="name"><h4>Name of the Research Scholar:</h4></label>&nbsp&nbsp<b><i><span><%= Namee1%></span></i><b>
+                              
+                          
+                      </div> <br>
+                      <div class="form-group">
+                          
+                          
+                            <label for="username"><h4>  Registration Number:</h4></label>&nbsp&nbsp<b><i><span><%= Un1%></span></i><b>
+                             
+                        
+                      </div> <br>
+          
+                      <div class="form-group">
+                          
+                          
+                              <label for="Date Of Birth:"><h4>Date Of Birth:</h4></label>&nbsp&nbsp<b><i><span><%= Dob1%></span></i><b>
+                             
+                        
+                      </div>
+           <br>
+                      <div class="form-group">
+                      
+                             <label for="doj"><h4>  Date Of Joining:</h4></label>&nbsp&nbsp<b><i><span><%= Doj1%></span></i><b>
+                              
+                    
+                      </div> <br>
+                      <div class="form-group">
+                      
+                             <label for="fs"><h4> Father's name/Husband's name: </h4></label>&nbsp&nbsp<b><i><span><%= Fs1 %></span></i><b>
+                              
+                    
+                      </div> <br>
+                      <div class="form-group">
+                      
+                             <label for="fs"><h4> Education:</h4></label>&nbsp&nbsp<b><i><span><%= Edu1%></span></i><b>
+                              
+                    
+                      </div> <br>
+                      
+                       <div class="form-group">
+                      
+                             <label for="fs"><h4> Gender:</h4></label>&nbsp&nbsp<b><i><span><%= Gen1 %></span></i><b>
+                              
+                    
+                      </div> <br>
+                      <div class="form-group">
+                          
+                      
+                              <label for=ph><h4>Phone number:</h4></label>&nbsp&nbsp<b><i><span><%= Phno1%></span></i><b>
+                       </div> <br>
+                             
+                       <div class="form-group">
+                      
+                             <label for="fs"><h4> Email Address:</h4></label>&nbsp&nbsp<b><i><span><%= Ema1%></span></i><b>
+                              
+                    
+                      </div> <br>
+                       <div class="form-group">
+                      
+                             <label for="fs"><h4> Present Address:</h4></label>&nbsp&nbsp<b><i><span><%= 
+                             Pre1 %></span></i><b>
+                              
+                    
+                      </div> <br>
+                       <div class="form-group">
+                      
+                             <label for="fs"><h4> Permanent Address:</h4></label>&nbsp&nbsp<b><i><span><%= 
+                             Per1 %></span></i><b>
+                              
+                    
+                      </div> <br>
+                       
+                      
+                       
+
+                      
+                
+                      </div> <br>
+
+                    
+                  
+                                
+               
+                  
+              </div>
+               
+              </div><!--/tab-pane-->
+          </div><!--/tab-content-->
+
+        </div><!--/col-9-->
+    </div><!--/row-->
+                                                      

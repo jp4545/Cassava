@@ -1,0 +1,43 @@
+<html>
+<link href="admin.css" rel="stylesheet" id="bootstrap-css">
+<script src="admin.js"></script>
+<script src="admin.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="login.js" ></script>
+<body>
+<div id="formWrapper">
+
+<div id="form">
+<div class="logo">
+<h1 class="text-center head">ADMIN LOGIN</h1>
+</div>
+<center><h3><span> <%= message %> </span></h3></center>
+	<form name=pq action="/checkadmin" method="post">
+<div class="form-item">
+			
+			<div class="form-item">
+				
+			ADMIN ID:<br><br>
+<input type="email" name="admineemail" id="fn" class="form-style" autocomplete="off"placeholder="Name of the Research Scholar"/>
+		</div>
+		
+<div class="form-item">
+				
+			PASSWORD:<br><br>
+<input type="password" name="adminppassword" id="fn" class="form-style" autocomplete="off"placeholder="password"/>
+		</div>
+	<center><input type="submit" class="login" value="LOGIN">
+		<div class="clear-fix"></div>
+		</div></center>
+	</form>
+	<form name="d" action="/signupadd" method="post">
+		<center><input type="submit" class="login" value="SIGNUP">
+		<div class="clear-fix"></div>
+		</div></center>
+			
+</form>			
+</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<html>
+<link href="work.css" rel="stylesheet" id="bootstrap-css">
+<script src="work.css"></script>
+<script src="work.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<script src="work.js" ></script>
+<body>
+<div id="formWrapper">
+
+<div id="form">
+<div class="logo">
+<h1 class="text-center head">WORK ALLOCATION</h1>
+</div>
+<center><h3><span> <%= message %> </span></h3></center>
+
+
+	<form name="ddd" action="/sendwork" method="post">
+<div class="form-item">
+			
+
+			SCHOLAR ID:<br><br>
+<input type="text" name="rsiddd" id="fn" class="form-style" autocomplete="off"placeholder="ID of the Research Scholar"/>
+		</div>
+		<div>
+          WORK TO BE ALLOCTED:<br><br>
+<textarea rows="13" cols="60" name="wa" class="form-style" placeholder="WORK ALLOCATION"></textarea></div><br><br>
+    <div class="form-item">
+			
+
+			ALLOCATED BY:<br><br>
+<input type="text" name="supervise" id="fn" class="form-style" autocomplete="off" placeholder="Name of the Research Scholar"/>
+		</div>
+	
+	<center><input type="submit" class="login" value="SEND NOTIFICATION">
+		<div class="clear-fix"></div>
+		</div></center>
+	</form>
+	
+		
+			
+</form>			
+</div>
+</div>
+</body>
+</html>
+
