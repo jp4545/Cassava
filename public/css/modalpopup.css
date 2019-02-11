@@ -1,0 +1,120 @@
+
+
+body{
+     font-family:cursive;
+  }
+
+
+ .modal-container {
+     position: fixed;
+     left: 50%;
+     top:-50px;
+     transform: translate(-50%, -200%);
+     background: #FFF;
+     border-radius: 5px;
+     width: 60%;
+     height: 70%;
+     transition: transform 200ms ease-out;
+     font-family:now;
+}
+ .modal-container .modal-header {
+     position: relative;
+     top: -20px;
+     background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+;
+     padding: 10px 0;
+     border-radius: 5px;
+     text-align: center;
+     font-size: 24px;
+     color: #FFF;
+     margin: 0 20px;
+}
+ .modal-heading{
+     position: absolute;
+     left: 50%;
+     top: 39%;
+     transform: translate(-50%,-50%);
+     text-decoration: none;
+     color:#FFF;
+     font-weight:600;
+     letter-spacing:1px;
+}
+ .modal-container p {
+     font-size: 18px;
+     margin: 0;
+     text-align: justify;
+     height: max-content;
+}
+ .modal:before {
+     content: "";
+     position: fixed;
+     display: none;
+     left: 0;
+     top: -0;
+     height: 100%;
+     width: 100%;
+     background: rgba(0, 0, 0, 0.6);
+}
+ .modal:target:before {
+     display: block;
+}
+ .modal:target .modal-container {
+     transform: translate(-50%, -50%);
+     top:50%;
+}
+ .modal-container .close {
+     top: -20px;
+     position: absolute;
+     right: 30px;
+     text-decoration: none;
+     color: #FFF;
+     background: #D5573F;
+     border-radius: 50px;
+     /*border:1px solid white;*/
+     box-shadow: 1px 1px #DC7E68;
+     height: 20px;
+     width: 20px;
+     text-align: center;
+     line-height: 15px;
+}
+h2{
+  letter-spacing: 1px;
+    color: #7983f8;
+    font-size: 32px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-align-last: center;
+  margin-top:50px;
+}
+ 
+
+ #body-scroll::-webkit-scrollbar{
+    width: 10px;
+     background-color: #F5F5F5;
+     height: 400px;
+}
+ #body-scroll::-webkit-scrollbar-thumb{
+     border-radius: 10px;
+   
+     background-color: #FFF;
+     background: #FF512F;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #F09819, #FF512F);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #F09819, #FF512F); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+ .modal-body{
+    padding: 20px;
+     padding-top: 0;
+     height: 400px!important;
+}
+ .scrollbar{
+    height: inherit;
+     overflow-y: auto;
+     scroll-behavior: smooth;
+}
+body{
+     font-family:cursive;
+  }

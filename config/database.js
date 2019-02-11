@@ -1,3 +1,3 @@
 module.exports = {
-  'database': 'mongodb://localhost/social'
+  'database': 'mongodb://localhost/cassavaproduct'
 };

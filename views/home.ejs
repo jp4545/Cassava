@@ -1,48 +1,485 @@
-<html>
-<head>
-
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Home</title>
+<!-- Bootstrap stylesheet -->
+<link href="css/bootstrap1.css" rel="stylesheet" type="text/css">
+<!--Font awesome-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-.button {
-    
-    
-    background-size:cover;
-    border: none;
-    color: white;
-    cursor: pointer;
-    background-color: DodgerBlue;
-    background-color: RoyalBlue;
-    padding: 15px 32px;
-    text-align: center;
-    position: relative ;
-    text-decoration: none;
-    size: 30px;
-    font-size:50px;
-    width: 20%;
-    height: 30%;
-    margin: 20px 30px;
-    cursor: pointer;
-}
+<!-- crousel css -->
+<link href="js/owl.carousel.css" rel="stylesheet" type="text/css" />
 
-.btn:hover { background-color: RoyalBlue;
+<!--bootstrap select-->
+<link href="css/bootstrap-select.css" rel="stylesheet" type="text/css" />
+<!-- font -->
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,600,700,800,900" rel="stylesheet">
+<!-- font-awesome -->
+<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
 
- }
-</style>
+<link href="css/ele-style.css" rel="stylesheet" type="text/css"/>
+<!-- stylesheet -->
+<link href="css/style1.css" rel="stylesheet" type="text/css"/>
+<!-- Modal Popup -->
+<link href="css/modalpopup.css" rel="stylesheet" type="text/css">
 </head>
+<style>
+#topnav-right
+{
+  float:right;
+}
+@media screen and (max-width: 628px) {
+  .try{
+    margin-left: 0 !important;
+  }
+}
+</style>
 <body>
+<!--top start here -->
+<div class="top">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 col-md-12 col-lg-12 col-xs-12">
+        <ul class="list-inline pull-left icon">
+          <li>
+            <a href="../../html/organic_food/contactus.html">
+              <i class="fa fa-address-book-o"></i> Call us : +91 8903938288
+            </a>
+          </li>
+          <li>
+            <a href="../../html/organic_food/contactus.html">
+              <i class="fa fa-envelope"></i> Email : krishnakumar_meag@yahoo.co.in
+            </a>
+          </li>
+        </ul>
+        <ul class="list-inline pull-right  icons">
+          <li class="dropdown currency">
+            
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<!--top end here -->
+<!-- header start here-->
+<header>
+  <div class="container" >
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12" >
+        <div id="logo">
+          <a href="../../html/organic_food/index.html">
+            <img class="img-responsive" src="css/images/header1/logo.png" alt="logo" title="logo" />
+          </a>
+        </div>
+      </div>  
+      <div class="col-md-8 col-sm-8 col-lg-8 col-xs-12 try" style=" margin-left:15%">
+        <!-- menu start here -->
+        <div id="menu"> 
+          <nav class="navbar">
+            <div class="navbar-header">
+              <span class="menutext visible-xs">Menu</span>
+              <button data-target=".navbar-ex1-collapse" data-toggle="collapse" class="btn btn-navbar navbar-toggle" type="button"><i class="fa fa-bars"></i></button>
+            </div>
+            <div class="collapse navbar-collapse navbar-ex1-collapse padd0">
+              <ul class="nav navbar-nav text-right">
+                <li class="dropdown topheader">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Home</b></a>
+                </li>
+                <li>
+                  <a href="/gallery">Gallery<b></a></b></a>
+                </li>
+                
+                
+              </ul>
+              <ul class="nav navbar-nav navbar-right text-right">
+               
+                <li>
+                  <a href="/aboutus">About  us</a>
+                </li>
+               
+                <li>
+                  <a href="/contactus">Contact us</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <!-- menu end here -->
+      </div>
+      
+    </div>
+  </div>
+</header>
+<!-- header end here -->
+<!-- slider start here -->
+<div class="slide"> 
+  <div class="slideshow owl-carousel">
+    <div class="item">
+      <img src="css/images/Header/header1.jpg" alt="banner" title="banner" class="img-responsive"/>
+    </div>
+    <div class="item">
+      <img src="css/images/tubercrop.jpg" alt="banner" title="banner" class="img-responsive"/>
+    </div>
+    <div class="item">
+      <img src="css/images/Header/header1.jpg" alt="banner" title="banner" class="img-responsive"/>
+    </div>
+  </div>
+</div>
+<!-- slider end here -->
+<!-- product start here -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 commontop text-center">
+      <p>Fresh Foods</p>
+      <h4>
+        <i class="icon_star_alt"></i>
+        <i class="icon_star_alt"></i>
+        <i class="icon_star_alt"></i> 
+        Our products
+        <i class="icon_star_alt"></i>
+        <i class="icon_star_alt"></i>
+        <i class="icon_star_alt"></i>
+      </h4>
+    </div>
+    <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12">
+      <ul class="nav nav-tabs list-inline">
+        <li class="active">
+          <a href="#cassavaflour" data-toggle="tab" aria-expanded="true">HQCF <span>Cassava Flour</span></a>
+        </li>
+        <li class="">
+          <a href="#cassavastarch" data-toggle="tab" aria-expanded="false">Cassava <span>Starch</span></a>
+        </li>
+        
+      </ul>
+      <div  class="tab-content">
+        <div class="tab-pane active" id="cassavaflour">
+          <div class="row">
+            
 
-<h1>LOGIN HOME</h1><br><br><br><br><br><br>
-<center><form name="user" action="/scholarlogin" method="post">
-<button class="button">USER LOGIN<i class="fa fa-user"></i></button>
-</form>
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-<form name="admin" action="/adminlogin" method="post">
-<button class="button">ADMIN LOGIN<i class="fa fa-user"></i></button></form>
-</center>
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 product-grid">
+                <div class="product-thumb">
+                <div class="image">
+                  <a class="rec-fill front front--slide-left" href="html/organic_food/shop.html"><img src="css/images/products/cassava1.jpg" alt="image" title="image" class="img-responsive" /></a>
+                  <a class="rec-fill back back--slide-left" href="html/organic_food/shop.html"><img src="css/images/products/cassava1.jpg" alt="image" title="image" class="img-responsive" /></a>
+                  <div class="sale"><p>Sale</p></div>
+                  <div class="onhover">
+                    <ul class="list-inline">
+                      <li><a href="#"><i class="fa fa-shopping-cart"></i> Quality</a></li>
+                      <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                      <li><a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="caption">
+                  <h4><a href="html/organic_food/shop.html">Hign Quality Cassava Flour</a></h4>
+                  <p class="price"><span class="price-old">$99.00</span> $90.00</p>
+                </div>
+              </div>  
+              </div>
+              <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 product-grid" style="overflow-y: scroll; height:420px;">
+                <p><b>HQCF is an improved cassava flour produced using a non-traditional processing technique. It is a non-fermented, white, smooth and odorless cassava flour processed from freshly harvested roots. Detoxification is primarily achieved through the grating, dewatering, and drying process and free from fermentation. This is obtained through a process of peeling, washing, grating, pressing and drying. The major difference between traditional cassava flour and high quality food grade cassava flour is given in the process flow chart with detailed unit operations followed.</b></p>
+                <table >
+                <tr>
+                  <th>S.no</th>
+                  <th>Characteristics</th>
+                  <th>Max Range(%)</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th>Moisture, (% by weight), Max</th>
+                  <th>13.0</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>Total ash (on dry basis), (% by weight), Max </th>
+                  <th>1.80</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>Acid insoluble ash (on dry basis), (% by weight), Max</th>
+                  <th>0.10</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>Starch (on dry basis), (% by weight), Min </th>
+                  <th>72.0</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>Crude Fibre (on dry basis), (% by weight), Max </th>
+                  <th>2.10</th>
+                </tr>
+                 <tr>
+                  <th>6</th>
+                  <th>pH of aqueous extract </th>
+                  <th>4.5to</th>
+                </tr>
+                 <tr>
+                  <th>7</th>
+                  <th>Cold water solubles (on dry basis), (% by weight), Max </th>
+                  <th>11.0</th>
+                </tr>
+                </table><br>
+                <center>
+                <img src="css/images/cassavaflour.png"></center>
+              </div>
+           
+            
+            
+            
+            
+          
+          </div>
+        </div>
+        <div class="tab-pane" id="cassavastarch">
+          <div class="row">
+            
+            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-12 product-grid" >
+              <div class="product-thumb">
+                <div class="image">
+                  <a class="rec-fill front front--slide-left" href="html/organic_food/shop.html"><img src="css/images/products/cassava2.jpg" alt="image" title="image" class="img-responsive" /></a>
+                  <a class="rec-fill back back--slide-left" href="html/organic_food/shop.html"><img src="css/images/products/cassava2.jpg" alt="image" title="image" class="img-responsive" /></a>
+                  <div class="sale"><p>Sale</p></div>
+                  <div class="onhover">
+                    <ul class="list-inline">
+                      <li><a href="#"><i class="fa fa-shopping-cart"></i> Quality</a></li>
+                      <li><a href="#"><i class="fa fa-heart"></i></a></li>
+                      <li><a href="#"><i class="fa fa-retweet"></i></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="caption">
+                  <h4><a href="html/organic_food/shop.html">Cassava Starch</a></h4>
+                  <p class="price"><span class="price-old">$99.00</span> $90.00</p>
+                </div>
+              </div>  
+            </div>
+             <div class="col-md-8 col-lg-8 col-sm-8 col-xs-12 product-grid" style="overflow-y: scroll; height:420px;">
+                <p><b>The native cassava starch is used in the food industry for production of sausage, monosodium glutamate (MSG), glucose and bakery products, whereas modified cassava starch is used for textile, glue, paper, plywood and the pharmaceutical industry. The process for production for native cassava starch is given in the flow chart.</b></p>
+                <table >
+                <tr>
+                  <th>S.no</th>
+                  <th>Characteristics</th>
+                  <th>Max Range(%)</th>
+                </tr>
+                <tr>
+                  <th>1</th>
+                  <th>Moisture, percentage by weight, Max</th>
+                  <th>12.5</th>
+                </tr>
+                <tr>
+                  <th>2</th>
+                  <th>Total ash (on dry basis), percentage by weight, Max</th>
+                  <th>0.50</th>
+                </tr>
+                <tr>
+                  <th>3</th>
+                  <th>Acid insoluble ash (on dry basis), percentage by weight, Max</th>
+                  <th>0.05</th>
+                </tr>
+                <tr>
+                  <th>4</th>
+                  <th>Starch (on dry basis), percentage by weight, Min </th>
+                  <th>98.00</th>
+                </tr>
+                <tr>
+                  <th>5</th>
+                  <th>Protein (on dry basis) percent by weight Max.</th>
+                  <th>0.30</th>
+                </tr>
+                 <tr>
+                  <th>6</th>
+                  <th>Sulphur di oxide, ppm max </th>
+                  <th>100</th>
+                </tr>
+                 <tr>
+                  <th>7</th>
+                  <th>Crude fibre (on dry basis), percentage by weight, Max </th>
+                  <th>0.20</th>
+                </tr>
+                <tr>
+                  <th>8</th>
+                  <th>pH of aqueous extract </th>
+                  <th>4.5 to 7</th>
+                </tr>
+                 <tr>
+                  <th>9</th>
+                  <th>Cold water solubles (on dry basis), percentage by weight, Max </th>
+                  <th>0.70</th>
+                </tr>
+                </table><br>
+                <center>
+                <img src="css/images/cassavastarch.png"></center>
 
+              </div>
+           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- blog start here -->
+<div class="blog">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-sm-12 col-lg-12 col-xs-12 commontop text-center">
+        <p>Latest news</p>
+        <h4>
+          <i class="icon_star_alt"></i>
+          <i class="icon_star_alt"></i>
+          <i class="icon_star_alt"></i> 
+          our blog
+          <i class="icon_star_alt"></i>
+          <i class="icon_star_alt"></i>
+          <i class="icon_star_alt"></i>
+        </h4>
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+        <div class="box">
+          <div class="image">
+            <a href="../../html/organic_food/blog-detail.html"><img class="img-responsive" src="css/images/header1/blog1.png" alt="image" title="image"></a>
+            <div class="onhover">
+              <p>5<br>June</p>
+            </div>
+          </div>
+          <div class="caption">
+            <h4>Post Title Here</h4>
+            <h6>Default category<span class="pull-right">by - john doe</span></h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus erat semper sapien laoreet, mattis cursus lacus imperdiet. Suspendisse sagittis mi eget cursus pulvinar...</p>
+            <div class="button-group">
+              <button type="button"><i class="icon_heart"></i></button>
+              <button type="button"><i class="icon_comment"></i></button>
+              <hr>
+              <a class="pull-right" href="../../html/organic_food/blog-detail.html">Read More <i class="arrow_carrot-2right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+        <div class="box">
+          <div class="image">
+            <a href="../../html/organic_food/blog-detail.html"><img class="img-responsive" src="../../html/organic_food/images/header1/blog2.png" alt="image" title="image"></a>
+            <div class="onhover">
+              <p>5<br>June</p>
+            </div>
+          </div>
+          <div class="caption">
+            <h4>Post Title Here</h4>
+            <h6>Default category<span class="pull-right">by - john doe</span></h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus erat semper sapien laoreet, mattis cursus lacus imperdiet. Suspendisse sagittis mi eget cursus pulvinar...</p>
+            <div class="button-group">
+              <button type="button"><i class="icon_heart"></i></button>
+              <button type="button"><i class="icon_comment"></i></button>
+              <hr>
+              <a class="pull-right" href="../../html/organic_food/blog-detail.html">Read More <i class="arrow_carrot-2right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+        <div class="box">
+          <div class="image">
+            <a href="../../html/organic_food/blog-detail.html"><img class="img-responsive" src="css/images/header1/blog3.png" alt="image" title="image"></a>
+            <div class="onhover">
+              <p>5<br>June</p>
+            </div>
+          </div>
+          <div class="caption">
+            <h4>Post Title Here</h4>
+            <h6>Default category<span class="pull-right">by - john doe</span></h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur finibus erat semper sapien laoreet, mattis cursus lacus imperdiet. Suspendisse sagittis mi eget cursus pulvinar...</p>
+            <div class="button-group">
+              <button type="button"><i class="icon_heart"></i></button>
+              <button type="button"><i class="icon_comment"></i></button>
+              <hr>
+              <a class="pull-right" href="../../html/organic_food/blog-detail.html">Read More <i class="arrow_carrot-2right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- blog end here -->
+<!-- shipping start here -->
+<div class="shipping">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+        <div class="box">
+          <img class="img-responsive" src="css/images/header1/icon1.png" alt="icon" title="icon">
+          <h4>We Support 24/7</h4>
+          <p>Nullam tempus luctus erat vitae volutpat. Donec rhoncus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+        <div class="box">
+          <img class="img-responsive" src="css/images/header1/icon2.png" alt="icon" title="icon">
+          <h4>Daily Updates</h4>
+          <p>Nullam tempus luctus erat vitae volutpat. Donec rhoncus.</p>
+        </div>
+      </div>
+      <div class="col-md-4 col-sm-4 col-lg-4 col-xs-12">
+        <div class="box">
+          <img class="img-responsive" src="css/images/header1/icon3.png" alt="icon" title="icon">
+          <h4>Free Shipping</h4>
+          <p>Nullam tempus luctus erat vitae volutpat. Donec rhoncus.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- shipping end here -->
+<!-- footer start here -->
+<footer>
+  <div class="powered">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12">
+          <p>© Copyright 2017, <span>Organic tuber crops.</span>  All Rights Reserved.</p>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 text-right">
+          <ul class="list-inline">
+            <li>
+              <a href="www.google.com"><i class="fa fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <i class="fa fa-instagram"></i>
+            </li>
+            <li>
+              <i class="fa fa-twitter"></i>
+            </li>
+          </ul>
+        </div>
+      </div>  
+    </div>
+  </div>
+</footer>
+<!-- footer end here -->
+<!-- Form Validation-->
+<script src="js/formvalidate.js"></script>
+<!-- jquery -->
+<script src="js/jquery.2.1.1.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!--bootstrap select-->
+<script src="js/bootstrap-select.js"></script>
+<!--internal js-->
+<script src="js/internal.js"></script>
+<!-- owlcarousel js -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="js_id_UA-115890069-5.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115890069-5');
+</script>
 </body>
 </html>
-
