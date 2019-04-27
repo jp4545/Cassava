@@ -4,30 +4,27 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "bcrypt": "*",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "connect-flash": "*",
+    "cookie-parser": "^1.4.1",
     "ejs": "^2.6.1",
-    "mongoose": "^5.2.9"
+    "express": "*",
+    "express-handlebars": "*",
+    "express-messages": "*",
+    "express-photo-gallery": "*",
+    "express-session": "*",
+    "express-validator": "*",
+    "mongodb": "*",
+    "passport": "*",
+    "passport-http": "*",
+    "passport-ubuntu": "^0.2.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bcryptjs": "*",
-    "body-parser": "*",
-    "connect-flash": "*",
-    "cookie-parser": "^1.4.1",
-    "express": "*",
-    "bcrypt": "*",
-    "express-handlebars": "*",
-    "express-messages": "*",
-    "express-session": "*",
-    "express-validator": "*",
-    "mongodb": "*",
-    "passport": "*",
-    "passport-http": "*",
-    "passport-local ": "*",
-    "passport-ubuntu": "^0.2.0"
-  }
+  "license": "ISC"
 }

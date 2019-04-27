@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt');
 var saltRounds = 10;
+var Gallery = require('express-photo-gallery');
 var config      = require('./config/database'); // get db config file
 var Registerschema = require('./app/models/userschema');
 var ContactSChema = require('./app/models/contact');
@@ -18,6 +19,14 @@ var i=0;
 var j=0;
 var z=0;
 var { check } = require('express-validator/check')
+var options = 
+{
+    title: "Gallery"
+}
+var gallery_title = 
+{
+    title: "Cassava Products"
+}
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -43,7 +52,9 @@ mongoose.connect(config.database);
 app.set('view engine', 'ejs');
 
 
-
+app.use('/photos', Gallery('path_to_photos', options));
+     app.use('/gallery', Gallery('Cassava_Gallery', gallery_title));
+     
 app.get('/', function(req,res){
 
     res.render('home.ejs');
@@ -63,44 +74,14 @@ app.get('/gallery',function(req,res){
 app.get('/contactus',function(req,res){
     res.render('contactus.ejs'); 
 });
-
-//Home page with session tracking
+//Home
 app.get('/home', function(req,res){
-    // sess = req.session;
-    // if(sess.email)
-    // {
     res.render('home.ejs');
-    // }
-    // else
-    // {
-    // console.log('Please login again');
-    // res.redirect('/login');
-    // }
 });
-
-// //Redirect to register page
-// app.get('/register',function(req,res){
-//     res.render('register.ejs');
-// });
-
-// //Redirect to login page
-// app.get('/login',function(req,res){
-
-//     res.render('login.ejs');
-// });
-
-// app.get('/logout',function(req,res){
-//     req.session.destroy(function(err,logoutt){
-//         if(err)
-//         {
-//             console.log(err);
-//         }
-//         else
-//         {
-//             res.redirect('/login');
-//         }
-//     });
-// });
+//Products
+app.get('/products',function(req,res){
+    res.render('products.ejs'); 
+})
 
 app.post('/contact',function(req,res){
     var name = req.body.name
@@ -127,71 +108,6 @@ app.post('/contact',function(req,res){
     });
 });
 
-// app.post('/register',function(req,res){
-//     bcrypt.hash(req.body.password, saltRounds, function (err,   hash)
-//     {
-//     var firstname = req.body.firstname;
-//     var lastname = req.body.lastname;
-//     var email = req.body.email;
-//     var password = hash; 
-//     var mobilenumber = req.body.mobilenumber;
-//     var address = req.body.address;
-//     var profession = req.body.profession;
 
-//     new Registerschema({
-//         firstname : firstname,
-//         lastname : lastname,
-//         email: email,
-//         password: password,
-//         mobilenumber: mobilenumber,
-//         address: address,
-//         profession: profession
-
-//     }).save(function(err,user){
-//       if(err) 
-//         {
-//             console.log(err);
-//         }
-//         else
-//         {
-//             console.log('Registered Successfully');
-//             console.log(user);
-//             res.render('home.ejs');
-            
-//         }  
-//     });
-//   });  
-// });
-
-
-// app.post('/login', function(req, res){
-
-//     Registerschema.findOne({email: req.body.email}, function(err, users) {
-//     if( !err && users) {
-//         bcrypt.compare(req.body.password, users.password, function (err, result) {
-//         if (result == true) {
-//             sess = req.session;        
-//             console.log('Welcome user');
-//             sess.email = users.email;
-//             console.log(sess.email);
-//             res.redirect('/home');
-//         } else {
-//             console.log(result);
-//          console.log('Incorrect password');
-//          res.redirect('/login')
-        
-//         }
-//       });
-//     }
-
-//     else { 
-//             console.log("authenticated failed");
-//          }
-
-// });
-
-// });
-  
-  
   
 app.listen(port);
