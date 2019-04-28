@@ -34,28 +34,28 @@
 				<p>Pellentesque sed posuere nisi. Nunc nec looreet mauris.</p>
 			</div>
 			<div class="col-sm-offset-2 col-md-8 col-sm-8  col-xs-12">
-				<form  name="myForm" method="post" class="form-horizontal" action="/contact">
+				<form name="myForm">
 					<div class="form-group">
 						<div class="col-md-6 col-sm-6 col-xs-12">
-							<input type="text" name="name" value="" id="input-name" class="form-control" placeholder="Name *" required>
+							<input type="text" name="name" value="" id="input-name" class="form-control" placeholder="Name *" required="true">
 						</div>
 						<div class="col-md-6 col-sm-6 col-xs-12">
-							<input type="email" name="email" value="" id="input-email" class="form-control" placeholder="Email *"/>
+							<input type="email" name="email" value="" id="input-email" class="form-control" placeholder="Email *" required="true"/>
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-md-12 col-sm-12 col-xs-12">
-							<input type="text" name="subject" value="" id="input-subject" class="form-control" placeholder="Subject *" required>
+							<input type="text" name="subject" value="" id="input-subject" class="form-control" placeholder="Subject *" required="true">
 						</div>
 					</div>
 					<div class="form-group">
 						<div class="col-sm-12 col-md-12 col-xs-12">
 							<i class="icofont icofont-pencil-alt-5"></i>
-							<textarea name="enquiry" id="input-enquiry" class="form-control" placeholder="Your Comment"></textarea>
+							<textarea name="enquiry" id="input-enquiry" value="" class="form-control" placeholder="Your Comment"></textarea>
 						</div>
 					</div>
 					<div class="buttons text-right">
-						<input class="btn btn-primary" type="submit" onClick="validateForm()" value="Send Message" />
+						<input class="btn btn-primary" id="contact_us" type="submit" onclick="validateForm()" value="Send Message" />
 					</div>
 				</form>
 			</div>
@@ -122,6 +122,62 @@ Sreekariyam, Thiruvananthapuram- 695 017.
 </footer>
 <!-- footer end here -->
 <!-- jquery -->
+<script type="text/javascript">
+	$(document).ready(function(){
+ 				 $("#contact_us").click(function(e){
+
+ 				 	e.preventDefault();
+ 					var email = $("#input-email").val();
+ 					var name = $("#input-name").val();
+ 					var subject = $("#input-subject").val();
+ 					var enquiry = $("#input-enquiry").val();
+ 				 	$.ajax({
+    				 type: "POST",
+                      url: "/contact",
+                      data:{name:name,email:email,subject:subject,enquiry:enquiry},
+                    success: function(success) {
+                        	if(success=="inserted")
+                        	{
+                        		alert("Your request has been sent, Admin will contact you soon");
+                        		location.reload();
+                        	}
+                        	if(success=="not_inserted")
+                        	{
+                        		alert("An Eror has occured, Please resent your request");
+                        		location.reload();
+                        	}
+                        	
+					},
+                    error: function(jqXHR, textStatus, err) {
+                       alert('Oops! Something has gone wrong. Check your Connection');
+                        location.reload();
+
+                       
+                      }
+                  
+                  });
+ 				  });
+   });
+</script>
+<script type="text/javascript">
+function validateForm() {
+  var name = document.forms["myForm"]["name"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var subject = document.forms["myForm"]["subject"].value;
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  if (subject == "") {
+    alert("subject must be filled out");
+    return false;
+  }
+}
+</script>
 <script src="js/jquery.2.1.1.min.js"></script>
 <!-- bootstrap js -->
 <script src="js/bootstrap.min.js"></script>

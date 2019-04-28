@@ -81,13 +81,17 @@ app.get('/home', function(req,res){
 //Products
 app.get('/products',function(req,res){
     res.render('products.ejs'); 
+});
+//Why Cassava
+app.get('/whycassava',function(req,res){
+    res.render('whycassava.ejs');
 })
 
 app.post('/contact',function(req,res){
-    var name = req.body.name
-    var email = req.body.email
-    var subject = req.body.subject
-    var enquiry = req.body.enquiry
+    var name = req.body.name;
+    var email = req.body.email;
+    var subject = req.body.subject;
+    var enquiry = req.body.enquiry;
     new ContactSChema({
         name : name,
         email : email,
@@ -97,12 +101,13 @@ app.post('/contact',function(req,res){
       if(err) 
         {
             console.log(err);
+            res.end("not_inserted");
         }
         else
         {
             console.log('Registered contact Successfully');
             console.log(user);
-            res.render('home.ejs');
+            res.end("inserted");
             
         }  
     });
