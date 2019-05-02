@@ -31,7 +31,6 @@
 					<i class="icon_star_alt"></i>
 					<i class="icon_star_alt"></i>
 				</h4>
-				<p>Pellentesque sed posuere nisi. Nunc nec looreet mauris.</p>
 			</div>
 			<div class="col-sm-offset-2 col-md-8 col-sm-8  col-xs-12">
 				<form name="myForm">
@@ -71,16 +70,13 @@
 				<ul class="list-inline">
 					<li>
 						<i class="fa fa-map-marker"></i>
-						ICAR- Central Tuber Crops Research Institute (CTCRI)
-<br>Trivandrum City, India. 
+						509, Ramar Thottam.Esaparai
+<br>Nagalur, Erode, <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Tamilnadu - 638502
 					</li>
 					<li>
-						<i class="fa fa-envelope-o"></i>
-Sreekariyam, Thiruvananthapuram- 695 017.
-					</li>
-					<li>
+
 						<i class="fa fa-mobile"></i>
-						Office: 0471-2598551, Fax: 0471-2590063
+						Office: 8903938288
 					</li>
 				</ul>
 			</div>
@@ -92,102 +88,8 @@ Sreekariyam, Thiruvananthapuram- 695 017.
 <!-- address end here -->
 <!-- map start here -->
 <div class="map">
-	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d62193.794934704965!2d80.21298570270368!3d13.028527432431261!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05beb58e36ea21%3A0x4c8bda7798a1e7db!2sICAR-Central+Tuber+Crops+Research+Institute!5e0!3m2!1sen!2sin!4v1548259995918" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+	<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d5714.293886422316!2d77.53715418242307!3d11.587552939807821!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1556808175208!5m2!1sen!2sin" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 <!-- map end here -->
 <!-- footer start here -->
-<footer>
-	<div class="powered">
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-6 col-md-6 col-lg-6 col-xs-12">
-					<p>© Copyright 2017, <span>Organic tuber crops.</span>  All Rights Reserved.</p>
-				</div>
-				<div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 text-right">
-					<ul class="list-inline">
-						<li>
-							<a href="www.google.com"><i class="fa fa-facebook-f"></i></a>
-						</li>
-						<li>
-							<i class="fa fa-instagram"></i>
-						</li>
-						<li>
-							<i class="fa fa-twitter"></i>
-						</li>
-					</ul>
-				</div>
-			</div>	
-		</div>
-	</div>
-</footer>
-<!-- footer end here -->
-<!-- jquery -->
-<script type="text/javascript">
-	$(document).ready(function(){
- 				 $("#contact_us").click(function(e){
-
- 				 	e.preventDefault();
- 					var email = $("#input-email").val();
- 					var name = $("#input-name").val();
- 					var subject = $("#input-subject").val();
- 					var enquiry = $("#input-enquiry").val();
- 				 	$.ajax({
-    				 type: "POST",
-                      url: "/contact",
-                      data:{name:name,email:email,subject:subject,enquiry:enquiry},
-                    success: function(success) {
-                        	if(success=="inserted")
-                        	{
-                        		alert("Your request has been sent, Admin will contact you soon");
-                        		location.reload();
-                        	}
-                        	if(success=="not_inserted")
-                        	{
-                        		alert("An Eror has occured, Please resent your request");
-                        		location.reload();
-                        	}
-                        	
-					},
-                    error: function(jqXHR, textStatus, err) {
-                       alert('Oops! Something has gone wrong. Check your Connection');
-                        location.reload();
-
-                       
-                      }
-                  
-                  });
- 				  });
-   });
-</script>
-<script type="text/javascript">
-function validateForm() {
-  var name = document.forms["myForm"]["name"].value;
-  var email = document.forms["myForm"]["email"].value;
-  var subject = document.forms["myForm"]["subject"].value;
-  if (name == "") {
-    alert("Name must be filled out");
-    return false;
-  }
-  if (email == "") {
-    alert("Email must be filled out");
-    return false;
-  }
-  if (subject == "") {
-    alert("subject must be filled out");
-    return false;
-  }
-}
-</script>
-<script src="js/jquery.2.1.1.min.js"></script>
-<!-- bootstrap js -->
-<script src="js/bootstrap.min.js"></script>
-<!--bootstrap select-->
-<script src="js/bootstrap-select.js"></script>
-<!--internal js-->
-<script src="js/internal.js"></script>
-<!-- owlcarousel js -->
-<script src="js/owl.carousel.min.js"></script>
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="js_id_UA-115890069-5.js"></script>
-</body>
-</html>
+<% include partials/footer %>

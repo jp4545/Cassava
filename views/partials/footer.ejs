@@ -1,0 +1,122 @@
+<footer>
+  <div class="powered">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-8 col-lg-12 col-xs-12">
+          
+        <ul class="list-inline pull-left icon">
+          <li>
+            <a href="../../html/organic_food/contactus.html">
+              <i class="fa fa-address-book-o"></i> Call us : +91 8903938288
+            </a>
+          </li>
+          <li>
+            <a href="../../html/organic_food/contactus.html">
+              <i class="fa fa-envelope"></i> Email : krishnakumar_meag@yahoo.co.in
+            </a>
+          </li>
+          <li>
+            <p>© Copyright 2017, <span>Organic tuber crops.</span>  All Rights Reserved.</p>
+          </li>
+        </ul>
+            
+          
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xs-12 text-right">
+          <ul class="list-inline">
+            <li>
+              <a href="www.google.com"><i class="fa fa-facebook-f"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-instagram"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>  
+    </div>
+  </div>
+</footer>
+<!-- footer end here -->
+<!-- Form Validation-->
+<script src="js/formvalidate.js"></script>
+<!-- Header -->
+<script src="js/header.js"></script>
+<!-- jquery -->
+<script src="js/jquery.2.1.1.min.js"></script>
+<!-- bootstrap js -->
+<script src="js/bootstrap.min.js"></script>
+<!--bootstrap select-->
+<script src="js/bootstrap-select.js"></script>
+<!--internal js-->
+<script src="js/internal.js"></script>
+<!-- owlcarousel js -->
+<script src="js/owl.carousel.min.js"></script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="js_id_UA-115890069-5.js"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-115890069-5');
+</script>
+<script type="text/javascript">
+  $(document).ready(function(){
+         $("#contact_us").click(function(e){
+
+          e.preventDefault();
+          var email = $("#input-email").val();
+          var name = $("#input-name").val();
+          var subject = $("#input-subject").val();
+          var enquiry = $("#input-enquiry").val();
+          $.ajax({
+             type: "POST",
+                      url: "/contact",
+                      data:{name:name,email:email,subject:subject,enquiry:enquiry},
+                    success: function(success) {
+                          if(success=="inserted")
+                          {
+                            alert("Your request has been sent, Admin will contact you soon");
+                            location.reload();
+                          }
+                          if(success=="not_inserted")
+                          {
+                            alert("An Eror has occured, Please resent your request");
+                            location.reload();
+                          }
+                          
+          },
+                    error: function(jqXHR, textStatus, err) {
+                       alert('Oops! Something has gone wrong. Check your Connection');
+                        location.reload();
+
+                       
+                      }
+                  
+                  });
+          });
+   });
+</script>
+<script type="text/javascript">
+function validateForm() {
+  var name = document.forms["myForm"]["name"].value;
+  var email = document.forms["myForm"]["email"].value;
+  var subject = document.forms["myForm"]["subject"].value;
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if (email == "") {
+    alert("Email must be filled out");
+    return false;
+  }
+  if (subject == "") {
+    alert("subject must be filled out");
+    return false;
+  }
+}
+</script>
+</body>
+</html>

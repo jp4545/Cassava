@@ -85,6 +85,10 @@ app.get('/products',function(req,res){
 //Why Cassava
 app.get('/whycassava',function(req,res){
     res.render('whycassava.ejs');
+});
+
+app.get('/specification',function(req,res){
+    res.render('specifications.ejs');
 })
 
 app.post('/contact',function(req,res){
